@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-fonts);
+    text-align: center;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    /* Colores */
+    --color-60-bg: #1b2718;
+    --color-20-buttons-icons-etc: #dafea4;
+    --color-fonts: #f8f8f4;
+    /* Fuentes */
+    --fuente-h1: 'Lexend' , sans-serif;
+    --fuente-h2-h3-h4-h5: 'Poppins' , sans-serif;
+    --fuente-p: 'Raleway' , sans-serif;
+}
+h1{
+    font-family: var(--fuente-h1);
+    font-weight: 700;
+}
+h2{
+    font-family: var(--fuente-h2-h3-h4-h5);
+    font-weight: 600;
+}
+h3,h4,h5,h6, button, label, input{
+    font-family: var(--fuente-h2-h3-h4-h5);
+    font-weight: 500;
+}
+p{
+    font-family: var(--fuente-p);
+    font-weight: 400;
+}
+/* Header */
+header{
+    display: flex;
+    height: 100vh;
+    background-image: url(../IMG/bg\ header.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    position: relative;
+}
+#principalLogo{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 79px;
+    z-index: 1;
+    opacity: .88;
+}
+/* Question Section */
+.questionSection{
+    display: flex;
+    height: 100vh;
+    background-color: var(--color-60-bg);
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    padding: 0px 206px;
+}
+h2{
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.15);
+}
+/* About Section */
+.aboutSection{
+    display: flex;
+    height: fit-content;
+    background-color: #63795d;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 29px;
+    gap: 85px;
+}
+.info{
+    width: 632px;
+}
+.info img{
+    width: 66px;
+}
+.info p{
+    width: 100%;
+    font-size: 33px;
+}
+/* Contacto */
+.contacto{
+    height: fit-content;
+    background-color: var(--color-60-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0rem;
+}
+.contacto h2{
+    font-size: 72px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(130, 199, 113, 0.10);
+    height: 659px;
+    width: 662px;
+    gap: 79px;
+    border-radius: 22px;
+    border: 2px solid var(--color-fonts);
+    backdrop-filter: blur(63px);
+}
+#form2{
+    position: absolute;
+}
+form div label, form div input, textarea{
+    font-size: 1.3rem;
+}
+form div input, textarea{
+    border: none;
+    border-bottom: 4px solid white;
+    background: transparent;
+}
+form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 164px;
+    height: 65px;
+    background-color: var(--color-20-buttons-icons-etc);
+    border-radius: 60px;
+    color: var(--color-60-bg);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+    border: none;
+}
+form button:hover{
+    transform: scale(1.1);
+    opacity: .8;
+}
+/* Footer */
+footer{
+    display: flex;
+    height: fit-content;
+    background-color: var(--color-60-bg);
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    font-size: 30px;flex-wrap: wrap;
+}
+footer img{
+    width: 79px;
+    height: 79px;
+    opacity: .8;
+}
+@media screen and (max-width: 769px) {
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    form, #form2{
+        transform: scale(.8);
+    }
+    .questionSection{
+        padding: 0px 80px;
+    }
+    footer img{
+        width: 70px;
+        height: 70px;
+    }
+    footer{
+        font-size: 20px;
+    }
+    .contacto{
+        padding: 3.5rem 0rem;
+    }
+}
+@media screen and (max-width: 426px) {
+    h2{
+        font-size: 40px;
+    }
+    .info{
+        transform: scale(.8);
+    }
+    form, #form2{
+        transform: scale(.5);
+    }
+    footer img{
+        width: 50px;
+        height: 50px;
+    }
+    footer{
+        font-size: 13px;
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 325px){
+    h1{
+        font-size: 35px;
+    }
+    #principalLogo{
+        width: 50px;
+    }
+    .questionSection{
+        padding: 0px 40px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    .info{
+        transform: scale(.7);
+    }
+    form, #form2{
+        transform: scale(.4);
+    }
+    .contacto{
+        padding: 0rem 0rem;
+    }
+}
